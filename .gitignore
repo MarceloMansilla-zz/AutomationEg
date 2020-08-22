@@ -1,0 +1,11 @@
+.metadata
+.classpath
+.settings/
+.class
+**/sonarlint
+**/target
+/*.cmake
+/*.DS_Store
+/.user
+/build
+.sonarlint/default/.sonartmp_5562823017794349481/sonarlint-slf4j-sonar-log271193401496135183.jar
