@@ -12,3 +12,5 @@
 .sonarlint/default/.sonartmp_845682381366784763/sonarlint-slf4j-sonar-log7785741658536098987.jar
 
 .sonarlint/default/.sonartmp_7189254450084569318/
+
+*.jar
