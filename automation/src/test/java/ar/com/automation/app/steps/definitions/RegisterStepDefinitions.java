@@ -1,5 +1,6 @@
 package ar.com.automation.app.steps.definitions;
 
+import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
@@ -7,6 +8,7 @@ import ar.com.automation.app.configuration.DriverConfig;
 import ar.com.automation.app.tasks.login.LoginTask;
 import ar.com.automation.app.tasks.navigator.NavigatorTask;
 import ar.com.automation.app.tasks.register.RegisterTask;
+import ar.com.automation.app.tasks.webtable.WebTableTask;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,6 +24,9 @@ public class RegisterStepDefinitions {
 
 	@Autowired
 	private RegisterTask registerTask;
+	
+	@Autowired
+	private WebTableTask webTableTask;
 
 	@Given("I want to register a user")
 	public void i_want_to_register_a_user() {
@@ -56,6 +61,7 @@ public class RegisterStepDefinitions {
 
 	@When("I select Gender {string}")
 	public void i_select_Gender(String gender) {
+		registerTask.selectGender(gender);
 	}
 
 	@When("I check Hobbies {string},{string}")
@@ -110,10 +116,12 @@ public class RegisterStepDefinitions {
 	@When("I click on Submit")
 	public void i_click_on_Submit() {
 		registerTask.clickSubmit();
+
 	}
 
-	@Then("I am redirected to Web Table view")
-	public void i_am_redirected_to_Web_Table_view() {
+	@Then("I am redirected to Web Table view {string}")
+	public void i_am_redirected_to_Web_Table_view(String title) {
+		Assert.assertTrue(webTableTask.validateWebTablePage(title));
 	}
 
 }

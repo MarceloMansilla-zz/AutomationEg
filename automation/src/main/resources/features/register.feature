@@ -25,8 +25,8 @@ Feature: Register
     And I complete Password <password>
     And I complete Confirm Password <confirm-password>
     And I click on Submit
-    Then I am redirected to Web Table view
+    Then I am redirected to Web Table view <title>
 
     Examples: 
-      | first-name | last-name | address    | email           | phone        | gender | hobbies            | language    | skills | country   | another-country | date-of-birth-year | date-of-birth-month | date-of-birth-day | password  | confirm-password |
-      | "Ant"      | "Man"     | "Andreani" | "ant@gmail.com" | "1234567890" | "Male" | "Crisket","Movies" | "Bulgarian" | "APIs" | "Albania" | "India"         | "1980"             | "April"             | "20"              | "Pass123" | "Pass123"        |
+      | first-name | last-name | address    | email           | phone        | gender | hobbies            | language    | skills | country   | another-country | date-of-birth-year | date-of-birth-month | date-of-birth-day | password  | confirm-password | title                                                |
+      | "Ant"      | "Man"     | "Andreani" | "antass@gmail.com" | "1264590890" | "Male" | "Crisket","Movies" | "Bulgarian" | "APIs" | "Albania" | "India"         | "1980"             | "April"             | "20"              | "Pass123" | "Pass123"        | "- Double Click on Edit Icon to EDIT the Table Row." |

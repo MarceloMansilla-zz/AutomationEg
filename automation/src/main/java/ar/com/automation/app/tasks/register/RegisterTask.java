@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import ar.com.automation.app.page.service.register.RegisterPageService;
-import ar.com.automation.app.utils.enums.gender.Gender;
 
 @Component
 public class RegisterTask {
@@ -33,7 +32,7 @@ public class RegisterTask {
 		registerService.writePhone(phone);
 	}
 
-	public void selectGender(Gender gender) {
+	public void selectGender(String gender) {
 		registerService.selectGender(gender);
 	}
 
@@ -43,7 +42,7 @@ public class RegisterTask {
 	}
 
 	public void selectLanguage(String language) {
-		//registerService.selectLanguage(language);
+		registerService.selectLanguage(language);
 	}
 
 	public void selectSkills(String skill) {
@@ -80,6 +79,7 @@ public class RegisterTask {
 
 	public void clickSubmit() {
 		registerService.clickSubmit();
+		System.out.println("Click Submit");
 	}
 
 	public void clickRefresh() {

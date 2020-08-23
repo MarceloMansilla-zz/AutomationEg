@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import ar.com.automation.app.page.object.register.RegisterPage;
-import ar.com.automation.app.utils.enums.gender.Gender;
 
 @Component
 public class RegisterPageService {
@@ -54,8 +53,8 @@ public class RegisterPageService {
 		registerService.getGenderMale().click();
 	}
 
-	public void selectGender(Gender gender) {
-		if (gender == Gender.male) {
+	public void selectGender(String gender) {
+		if (gender.equals("Male")) {
 			selectMale();
 		} else {
 			selectFemale();
