@@ -14,7 +14,10 @@
 .sonarlint/default/.sonartmp_7189254450084569318/
 
 *.jar
+<<<<<<< HEAD
 
 automation/Drivers/NOTICE
 
 automation/Drivers/LICENSE
+=======
+>>>>>>> master
