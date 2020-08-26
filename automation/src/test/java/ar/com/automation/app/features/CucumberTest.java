@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(monochrome = true, plugin = { "de.monochromata.cucumber.report.PrettyReports:target/cucumber",
 		"json:target/cucumber-json-report.json", "pretty" }, tags = { "@Register" }, glue = {
-				"ar.com.automation.app.steps.definitions" }, features = { "src/main/resources/features/" })
+				"ar/com/automation/app/steps/definitions" }, features = { "src/main/resources/features/" })
 public class CucumberTest {
 
 }

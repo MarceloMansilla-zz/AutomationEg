@@ -80,4 +80,13 @@ public class RegisterPage extends BasePage {
 
 	@FindBy(xpath = "//button[@value='Refresh']")
 	private WebElement refreshBtn;
+	
+	
+	@FindBy(xpath = "//div[@ng-if='EmailExists']")
+	private WebElement emailExist;
+	
+	@FindBy(xpath = "//div[@ng-if='PhoneExists']")
+	private WebElement phoneExist;
+	
+	
 }

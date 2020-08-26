@@ -1,7 +1,5 @@
 package ar.com.automation.app.page.service.register;
 
-import java.util.List;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -76,16 +74,15 @@ public class RegisterPageService {
 		registerService.getHobbiesHockey().click();
 	}
 
-	public void checkHobbies(List<String> hobbies) {
-		for (String hobbie : hobbies) {
-			if (hobbie.equals("cricket")) {
-				checkCricket();
-			} else if (hobbie.equals("movies")) {
-				checkMovies();
-			} else if (hobbie.equals("hockey")) {
-				checkHockey();
-			}
+	public void checkHobbies(String hobbie) {
+		if (hobbie.equals("cricket")) {
+			checkCricket();
+		} else if (hobbie.equals("movies")) {
+			checkMovies();
+		} else if (hobbie.equals("hockey")) {
+			checkHockey();
 		}
+
 	}
 
 	public void selectLanguage(String language) {
