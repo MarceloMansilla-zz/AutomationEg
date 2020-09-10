@@ -1,5 +1,5 @@
 package ar.com.automation.app.utils.screenshotter;
 
-public class TakeScreenshotCondition {
-
+public enum TakeScreenshotCondition {
+	everyStep, failingScenario, endOfScenario, none
 }
